@@ -1,5 +1,13 @@
 print("hello world?"); print("Nah")
+a = 1.23
+print(type(a))
+name = "b"
+print(name)
+print(f"Hi, {name}")
+a, b = 1, "a"
+print(a, b)
 
+"""
 
 numbers2 = [10, 20, 30, 40, 50]
 sum = 0
@@ -40,7 +48,7 @@ def create_random_nickname():
 my_nickname = create_random_nickname()
 print(my_nickname)
 
-"""beverages = {
+beverages = {
 		"사이다": 1700,
 		"콜라": 1900,
 		"식혜": 2500,
