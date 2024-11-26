@@ -1,4 +1,4 @@
-# An empty loop
+""""# An empty loop
 a = 'geeksforgeeks'
 i = 0
 
@@ -8,7 +8,7 @@ while i < len(a):
 
 print('Value of i :', i)
 
-""""calc = lambda num: "Even number" if num % 2 == 0 else "Odd number"
+calc = lambda num: "Even number" if num % 2 == 0 else "Odd number"
 
 print(calc(20))
 
@@ -152,3 +152,30 @@ else:
     remain = coin - beverages[user_choice]
     print(remain)
 # 돈이 충분할 경우"""
+
+#GPT의 도움
+def solution(answers):
+    # 수포자들의 패턴 정의
+    patterns = [
+        [1, 2, 3, 4, 5],  # 수포자 1
+        [2, 1, 2, 3, 2, 4, 2, 5],  # 수포자 2
+        [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]  # 수포자 3
+    ]
+
+    scores = [0, 0, 0]  # 각 수포자가 맞힌 문제 수를 저장할 리스트
+
+    # 각 수포자의 패턴을 반복하면서 맞춘 문제 개수 계산
+    for i, pattern in enumerate(patterns):
+        # 패턴을 반복하면서 answers와 비교
+        for j, answer in enumerate(answers):
+            if answer == pattern[j]:
+                scores[i] += 1
+
+    # 가장 많이 맞힌 문제 개수 구하기
+    max_score = max(scores)
+
+    # 가장 많은 점수를 맞힌 수포자들의 번호를 찾기
+    result = [i + 1 for i, score in enumerate(scores) if score == max_score]
+
+    return result
+print(solution([1,2,3,4,5]))
