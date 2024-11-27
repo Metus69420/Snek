@@ -154,7 +154,7 @@ else:
 # 돈이 충분할 경우"""
 
 #GPT의 도움
-def solution(answers):
+"""def solution(answers):
     # 수포자들의 패턴 정의
     patterns = [
         [1, 2, 3, 4, 5],  # 수포자 1
@@ -179,3 +179,19 @@ def solution(answers):
 
     return result
 print(solution([1,2,3,4,5]))
+
+# 수포자 1의 패턴은 [1, 2, 3, 4, 5]
+pattern = [1, 2, 3, 4, 5]
+answers = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5]  # 길이가 10인 답안
+
+print(4%5)
+
+square = lambda x : print(x*x) if x>0 else None
+square(6)
+
+def sq(x):
+    return print(x * x) if x>0 else None
+sq(6)
+
+"""
+
