@@ -194,4 +194,12 @@ def sq(x):
 sq(6)
 
 """
+import random
+with open('C:\words.txt', 'r') as f:
+    lines = f.readlines()
+    lines_list = [line.strip() for line in lines]
+
+def randomwordgame0():
+    random.choice(lines_list)
+
 
